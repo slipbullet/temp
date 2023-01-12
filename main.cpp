@@ -2,9 +2,10 @@
 #include "search_server.h"
 #include "request_queue.h"
 #include <iostream>
-
+#include <string>
 int main() {
-    SearchServer search_server("and in at");
+    std::string temp = "and in at";
+    SearchServer search_server(temp);
     RequestQueue request_queue(search_server);
     search_server.AddDocument(1, "curly cat curly tail", DocumentStatus::ACTUAL, {7, 2, 7});
     search_server.AddDocument(2, "curly dog and fancy collar", DocumentStatus::ACTUAL, {1, 2, 3});
